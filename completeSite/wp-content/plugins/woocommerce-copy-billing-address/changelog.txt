@@ -1,0 +1,7 @@
+== Changelog ==
+
+= 1.0.1 - 30/11/2016 =
+* Fix - Copy billing address icon missing.
+
+= 1.0.0 - 17/11/2016 =
+* Stable Initial Release.

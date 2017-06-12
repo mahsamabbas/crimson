@@ -1,0 +1,48 @@
+/* gallery */
+
+.pzmp_magnifier_gallery {
+    overflow: auto;
+    padding: 0;
+}
+/* next/prev */
+.single-product.woocommerce .thumbnails {
+    position: relative;
+}
+
+.single-product.woocommerce .thumbnails #slider-prev,
+.single-product.woocommerce .thumbnails #slider-next {
+    display: none !important;
+    cursor: pointer;
+    width: 27px;
+    height: 26px;
+    background: url('../images/slider-arrow.png') no-repeat left center;
+    position: absolute;
+    top: 48%;
+    margin-top: -2px;
+}
+
+.single-product.woocommerce .thumbnails #slider-prev {
+    background-position: left center;
+    left: 0px;
+}
+
+.single-product.woocommerce .thumbnails #slider-next {
+    background-position: right center;
+    right: 0px;
+}
+
+.single-product.woocommerce .thumbnails:hover #slider-prev,
+.single-product.woocommerce .thumbnails:hover #slider-next {
+    display: block !important;
+}
+
+span.onsale {
+    z-index: 10000
+}
+
+div.pp_woocommerce a.pp_expand {
+    display: inline;
+    bottom: 10px;
+    top: initial;
+    left: 10px;
+}

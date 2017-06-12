@@ -1,0 +1,140 @@
+/**
+ * wc-copy-billing-address.scss
+ * Styles applied to Checkout Copy Billing Details.
+ */
+
+// WooCommerce font, Storefront doesn't work :(
+@font-face {
+	font-family: 'WooCommerce';
+	src: url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.eot');
+	src: url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.eot?#iefix') format('embedded-opentype'),
+		url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.woff') format('woff'),
+		url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.ttf') format('truetype'),
+		url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.svg#WooCommerce') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/**
+ * Styling begins
+ */
+.woocommerce-checkout {
+	#ship-to-different-address {
+		width: 100%;
+		position: relative;
+
+		a.billing-same-as-shipping {
+			border: 0;
+			margin: 0;
+			padding: 0;
+			color: #999;
+			float: right;
+			overflow: hidden;
+			box-shadow: none;
+			text-decoration: none;
+
+			&:focus,
+			&:active {
+				outline: none;
+			}
+
+			&::after {
+				font-family: 'WooCommerce';
+				content: '\e03a';
+				text-align: center;
+				line-height: 1;
+				font-size: 1em;
+				font-weight: 400;
+				-webkit-font-smoothing: antialiased;
+			}
+		}
+	}
+}
+
+/**
+ * Tooltips
+ */
+.tips {
+	cursor: help;
+	text-decoration: none;
+}
+
+img.tips {
+	padding: 5px 0 0;
+}
+
+#tiptip_holder {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999999;
+}
+
+#tiptip_holder {
+	&.tip_top {
+		padding-bottom: 5px;
+
+		#tiptip_arrow_inner {
+			margin-top: -7px;
+			margin-left: -6px;
+			border-top-color: #333;
+		}
+	}
+
+	&.tip_bottom {
+		padding-top: 5px;
+
+		#tiptip_arrow_inner {
+			margin-top: -5px;
+			margin-left: -6px;
+			border-bottom-color: #333;
+		}
+	}
+
+	&.tip_right {
+		padding-left: 5px;
+
+		#tiptip_arrow_inner {
+			margin-top: -6px;
+			margin-left: -5px;
+			border-right-color: #333;
+		}
+	}
+
+	&.tip_left {
+		padding-right: 5px;
+
+		#tiptip_arrow_inner {
+			margin-top: -6px;
+			margin-left: -7px;
+			border-left-color: #333;
+		}
+	}
+}
+
+#tiptip_content {
+	color: #fff;
+	font-size: 0.8em;
+	max-width: 150px;
+	background: #333;
+	text-align: center;
+	border-radius: 3px;
+	padding: 0.618em 1em;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+	code {
+		padding: 1px;
+		background: #888;
+	}
+}
+
+#tiptip_arrow,
+#tiptip_arrow_inner {
+	position: absolute;
+	border-color: transparent;
+	border-style: solid;
+	border-width: 6px;
+	height: 0;
+	width: 0;
+}
